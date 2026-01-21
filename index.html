@@ -18,8 +18,22 @@
 
     </a>
   </div>
+<script>
+  const botao = document.getElementById("btn-entrar");
+
+  botao.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    document.body.classList.add("fade-out");
+
+    setTimeout(() => {
+      window.location.href = botao.href;
+    }, 500);
+  });
+</script>
 
 </body>
 </html>
+
 
 
