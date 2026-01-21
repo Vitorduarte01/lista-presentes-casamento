@@ -184,4 +184,48 @@ body {
     .card img {
         height: 160px;
     }
+
+}
+/* ===== Página de entrada ===== */
+
+body.entrada {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #f8f5f0, #ffffff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.entrada-container {
+  text-align: center;
+  padding: 24px;
+  max-width: 420px;
+}
+
+.entrada-container h1 {
+  font-size: 34px;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.entrada-container p {
+  font-size: 15px;
+  opacity: 0.85;
+  margin-bottom: 28px;
+}
+
+.btn-entrada {
+  display: inline-block;
+  padding: 14px 22px;
+  background: #c2a87d;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 14px;
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-entrada:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
 }
