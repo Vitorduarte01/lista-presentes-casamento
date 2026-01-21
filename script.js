@@ -1,45 +1,187 @@
-const presentes = [{
-        nome: "Conjunto de Panelas",
-        imagem: "https://images.unsplash.com/photo-1586201375761-83865001e17b"
-    },
-    {
-        nome: "Air Fryer",
-        imagem: "https://images.unsplash.com/photo-1617191519400-38b05b6b8f9f"
-    },
-    {
-        nome: "Cafeteira",
-        imagem: "https://images.unsplash.com/photo-1509042239860-f550ce710b93"
-    },
-    {
-        nome: "Jogo de Jantar",
-        imagem: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
-    },
-    {
-        nome: "Jogo de Cama",
-        imagem: "https://images.unsplash.com/photo-1615874959474-d609969a20ed"
-    },
-    {
-        nome: "Conjunto de Taças",
-        imagem: "https://images.unsplash.com/photo-1510627498534-cf7e9002facc"
-    },
-    {
-        nome: "Liquidificador",
-        imagem: "https://images.unsplash.com/photo-1586201375761-83865001e17b"
-    },
-    {
-        nome: "Aspirador de Pó",
-        imagem: "https://images.unsplash.com/photo-1581578731548-c64695cc6952"
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f8f8f8;
+    margin: 0;
+    padding: 30px;
+    text-align: center;
+}
+
+h1 {
+    color: #4a4a4a;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.card button {
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    background: #c2a87d;
+    color: #fff;
+    cursor: pointer;
+}
+
+.btn-disabled {
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    background: #ccc;
+    color: #666;
+    cursor: default;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 20px;
     }
-];
+    h1 {
+        font-size: 24px;
+    }
+    .card p {
+        font-size: 15px;
+    }
+    .btn-disabled {
+        width: 100%;
+    }
+}
 
-const container = document.getElementById("lista-presentes");
+.card img {
+    max-height: 180px;
+    object-fit: cover;
+}
 
-presentes.forEach(item => {
-    container.innerHTML += `
-    <div class="card">
-      <img src="${item.imagem}" alt="${item.nome}">
-      <p>${item.nome}</p>
-      <button class="btn-disabled">Ver presente</button>
-    </div>
-  `;
-});
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    background: #f8f8f8;
+    color: #2d2d2d;
+}
+
+.topo {
+    text-align: center;
+    padding: 28px 18px 10px;
+}
+
+.topo h1 {
+    margin: 0;
+    font-size: 28px;
+    letter-spacing: 0.2px;
+}
+
+.sub {
+    margin: 8px 0 0;
+    opacity: 0.8;
+    font-size: 14px;
+}
+
+.grid {
+    display: grid;
+    gap: 16px;
+    padding: 18px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.card {
+    background: #fff;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+}
+
+.card img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    display: block;
+    background: #eee;
+}
+
+.card .info {
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.card .nome {
+    margin: 0;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 1.2;
+}
+
+.card .preco {
+    margin: 0;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.btn {
+    margin-top: 6px;
+    padding: 10px 12px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.btn-ativo {
+    background: #c2a87d;
+    color: #fff;
+}
+
+.btn-ativo:active {
+    transform: scale(0.98);
+}
+
+.btn-desativado {
+    background: #e7e7e7;
+    color: #777;
+    cursor: default;
+}
+
+.rodape {
+    text-align: center;
+    padding: 18px 18px 28px;
+    opacity: 0.75;
+    font-size: 13px;
+}
+
+
+/* Mobile fino */
+
+@media (max-width: 480px) {
+    .topo h1 {
+        font-size: 24px;
+    }
+    .card img {
+        height: 160px;
+    }
+}
